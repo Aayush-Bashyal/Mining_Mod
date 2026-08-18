@@ -60,6 +60,7 @@ public class MiningMod
 if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
 {
     event.accept(Moditems.RUBY);
+    event.accept(Moditems.SAPPHIRE);
 }
     }
 

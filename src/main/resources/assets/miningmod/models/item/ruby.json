@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "texture" : {
+    "layer0": "miningmod:item/ruby"
+  }
+
+}

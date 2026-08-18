@@ -1,6 +1,9 @@
 package net.bikash.miningmod;
 
 import com.mojang.logging.LogUtils;
+import net.bikash.miningmod.item.Moditems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -37,6 +40,8 @@ public class MiningMod
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        Moditems.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -52,7 +57,10 @@ public class MiningMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
+{
+    event.accept(Moditems.RUBY);
+}
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

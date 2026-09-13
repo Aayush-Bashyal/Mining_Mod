@@ -1,6 +1,7 @@
 package net.bikash.miningmod;
 
 import com.mojang.logging.LogUtils;
+import net.bikash.miningmod.block.ModBlocks;
 import net.bikash.miningmod.item.Moditems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -41,6 +42,9 @@ public class MiningMod
         MinecraftForge.EVENT_BUS.register(this);
 
         Moditems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

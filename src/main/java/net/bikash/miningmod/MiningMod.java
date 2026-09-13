@@ -66,6 +66,10 @@ if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
     event.accept(Moditems.RUBY);
     event.accept(Moditems.SAPPHIRE);
 }
+
+if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+    event.accept(ModBlocks.RUBY_BLOCK);
+}
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

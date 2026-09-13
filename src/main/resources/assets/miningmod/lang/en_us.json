@@ -1,4 +1,7 @@
 {
   "item.miningmod.ruby": "Ruby",
-  "item.miningmod.sapphire": "Sapphire"
+  "item.miningmod.sapphire": "Sapphire",
+
+  "block.miningmod.ruby_block": "Block of Ruby",
+  "block.miningmod.sapphire_block": "Block of Sapphire"
 }

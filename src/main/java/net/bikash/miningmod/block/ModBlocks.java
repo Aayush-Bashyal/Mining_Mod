@@ -20,6 +20,15 @@ public class ModBlocks {
 
 
 
+    public static final RegistryObject<Block> RUBY_ORE = registerBlock("ruby_ore",
+            ()-> new Block(BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops().sound( SoundType.STONE)));
+
+public static final RegistryObject<Block> SAPPHIRE_ORE = registerBlock("sapphire_ore",
+        () -> new Block(BlockBehaviour.Properties.of()
+                .strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+
     public static  final  RegistryObject<Block> RUBY_BLOCK = registerBlock( "ruby_block" ,
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST) ));

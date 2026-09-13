@@ -1,3 +1,13 @@
 {
-
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "miningmod:ruby_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "miningmod:ruby"
+  }
 }

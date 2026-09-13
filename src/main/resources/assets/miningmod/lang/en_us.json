@@ -3,5 +3,8 @@
   "item.miningmod.sapphire": "Sapphire",
 
   "block.miningmod.ruby_block": "Block of Ruby",
-  "block.miningmod.sapphire_block": "Block of Sapphire"
+  "block.miningmod.sapphire_block": "Block of Sapphire",
+
+  "block.miningmod.sapphire_Ore": "Sapphire Ore",
+  "block.miningmod.rubyOre": "Ruby Ore"
 }

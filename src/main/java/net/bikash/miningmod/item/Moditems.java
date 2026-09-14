@@ -2,6 +2,7 @@ package net.bikash.miningmod.item;
 
 import net.bikash.miningmod.MiningMod;
 import net.minecraft.world.item.*;
+
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -27,7 +28,7 @@ public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
     //axe
     public static final RegistryObject<Item> RUBY_AXE = ITEMS.register("ruby_axe",
             ()-> new AxeItem(ModToolTiers.RUBY,new Item.Properties()));
-    //shword
+    //sword
     public static final RegistryObject<Item> RUBY_SWORD = ITEMS.register("ruby_sword",
             ()-> new SwordItem(ModToolTiers.RUBY,new Item.Properties()));
 //hoe
@@ -37,8 +38,18 @@ public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
     public static final RegistryObject<Item> RUBY_SHOVEL = ITEMS.register("ruby_shovel",
             ()-> new ShovelItem(ModToolTiers.RUBY,new Item.Properties()));
 
-    //registering ruby armours
+    //registering ruby armors
+    public static final RegistryObject<Item> RUBY_HELMET = ITEMS.register("ruby_helmet",
+            () -> new ArmorItem(ModArmorMaterials.RUBY.getHolder().get(), ArmorItem.Type.HELMET, new Item.Properties()));
 
+    public static final RegistryObject<Item> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.RUBY.getHolder().get(), ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+
+    public static final RegistryObject<Item> RUBY_LEGGINGS = ITEMS.register("ruby_leggings",
+            () -> new ArmorItem(ModArmorMaterials.RUBY.getHolder().get(), ArmorItem.Type.LEGGINGS, new Item.Properties()));
+
+    public static final RegistryObject<Item> RUBY_BOOTS = ITEMS.register("ruby_boots",
+            () -> new ArmorItem(ModArmorMaterials.RUBY.getHolder().get(), ArmorItem.Type.BOOTS , new Item.Properties()));
 
 
 public static void register(IEventBus eventBus){

@@ -2,13 +2,18 @@ package net.bikash.miningmod;
 
 import com.mojang.logging.LogUtils;
 import net.bikash.miningmod.block.ModBlocks;
+import net.bikash.miningmod.item.ModArmorMaterials;
 import net.bikash.miningmod.item.ModToolTiers;
 import net.bikash.miningmod.item.Moditems;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,6 +25,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
+
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(MiningMod.MOD_ID)
 public class MiningMod
@@ -30,8 +37,10 @@ public class MiningMod
   public static final Logger LOGGER = LogUtils.getLogger();
 
 
+
     public MiningMod()
     {
+
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Register the commonSetup method for modloading
@@ -84,6 +93,30 @@ if(event.getTabKey()==CreativeModeTabs.TOOLS_AND_UTILITIES){
     event.accept(Moditems.RUBY_SHOVEL);
     event.accept(Moditems.RUBY_SWORD);
     }
+        if(event.getTabKey()==CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(Moditems.RUBY_HELMET);
+            event.accept(Moditems.RUBY_CHESTPLATE);
+            event.accept(Moditems.RUBY_LEGGINGS);
+            event.accept(Moditems.RUBY_BOOTS);
+        }
+
+    }
+    @SubscribeEvent
+    public static void onPlayerTick(TickEvent.PlayerTickEvent event){
+        if (event.phase != TickEvent.Phase.END){
+            return;
+        }
+        if(event.player.level().isClientSide()){
+            return;
+        }
+        if(event.player.getItemBySlot(EquipmentSlot.HEAD).is(Moditems.RUBY_HELMET.get())){
+            event.player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION,
+                    400,
+                    0,
+                    false,
+                    false));
+
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

@@ -6,5 +6,14 @@
   "block.miningmod.sapphire_block": "Block of Sapphire",
 
   "block.miningmod.sapphire_ore": "Sapphire Ore",
-  "block.miningmod.ruby_ore": "Ruby Ore"
+  "block.miningmod.ruby_ore": "Ruby Ore",
+
+  "item.miningmod.ruby_pickaxe": "Ruby Pickaxe",
+  "item.miningmod.ruby_axe": "Ruby Axe",
+  "item.miningmod.ruby_hoe": "Ruby Hoe",
+  "item.miningmod.ruby_sword": "Ruby Sword",
+  "item.miningmod.ruby_shovel": "Ruby Shovel",
+
+  "item.miningmod.sapphire_tool": "Sapphire Extreme"
+
 }

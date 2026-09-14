@@ -39,7 +39,7 @@ public class ModArmorMaterials {
                     List.of(new ArmorMaterial.Layer(
                             ResourceLocation.fromNamespaceAndPath(MiningMod.MOD_ID, "ruby")
                     )),
-                    10.0F,
+                    5.0F,
                     0.8F
             ));
 

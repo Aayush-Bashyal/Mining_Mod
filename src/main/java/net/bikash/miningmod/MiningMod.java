@@ -8,12 +8,14 @@ import net.bikash.miningmod.item.Moditems;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -118,6 +120,14 @@ if(event.getTabKey()==CreativeModeTabs.COMBAT){
                     false,
                     false));
 
+        }
+    }
+    @SubscribeEvent
+    public static void onLivingFall(LivingFallEvent event){
+        if(event.getEntity() instanceof Player player){
+            if(player.getItemBySlot(EquipmentSlot.FEET).is(Moditems.RUBY_BOOTS.get())){
+              event.setDamageMultiplier(0.50F);
+            }
         }
     }
 

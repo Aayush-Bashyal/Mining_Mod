@@ -1,18 +1,11 @@
 package net.bikash.miningmod.item;
 
 import net.bikash.miningmod.MiningMod;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.HoeItem;
-import net.minecraft.world.item.ShovelItem;
-import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
-import java.rmi.registry.Registry;
 
 public class Moditems {
 public static final DeferredRegister<Item> ITEMS =
@@ -33,16 +26,16 @@ public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
             ()-> new PickaxeItem(ModToolTiers.RUBY,new Item.Properties()));
     //axe
     public static final RegistryObject<Item> RUBY_AXE = ITEMS.register("ruby_axe",
-            ()-> new PickaxeItem(ModToolTiers.RUBY,new Item.Properties()));
+            ()-> new AxeItem(ModToolTiers.RUBY,new Item.Properties()));
     //shword
     public static final RegistryObject<Item> RUBY_SWORD = ITEMS.register("ruby_sword",
-            ()-> new PickaxeItem(ModToolTiers.RUBY,new Item.Properties()));
+            ()-> new SwordItem(ModToolTiers.RUBY,new Item.Properties()));
 //hoe
     public static final RegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe",
-            ()-> new PickaxeItem(ModToolTiers.RUBY,new Item.Properties()));
+            ()-> new HoeItem(ModToolTiers.RUBY,new Item.Properties()));
     //showel
     public static final RegistryObject<Item> RUBY_SHOVEL = ITEMS.register("ruby_shovel",
-            ()-> new PickaxeItem(ModToolTiers.RUBY,new Item.Properties()));
+            ()-> new ShovelItem(ModToolTiers.RUBY,new Item.Properties()));
 
 public static void register(IEventBus eventBus){
     ITEMS.register(eventBus);

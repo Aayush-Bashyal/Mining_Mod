@@ -1,5 +1,5 @@
 {
-  "feature":"miningmod:ruby_ore",
+  "feature": "miningmod:ruby_ore",
   "placement": [
     {
       "type": "minecraft:count",
@@ -19,9 +19,7 @@
           "absolute": 20
         }
       }
-    },
-    {
-      "type": "minecraft:biome"
     }
+
   ]
 }

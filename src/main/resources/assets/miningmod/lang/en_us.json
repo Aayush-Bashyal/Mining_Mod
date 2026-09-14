@@ -14,6 +14,12 @@
   "item.miningmod.ruby_sword": "Ruby Sword",
   "item.miningmod.ruby_shovel": "Ruby Shovel",
 
+  "item.miningmod.ruby_chestplate": "Ruby Chestplate",
+  "item.miningmod.ruby_helmet": "Ruby Helmet",
+  "item.miningmod.ruby_boots": "Ruby Boot",
+  "item.miningmod.ruby_leggings": "Ruby Legging",
+
+
   "item.miningmod.sapphire_tool": "Sapphire Extreme"
 
 }

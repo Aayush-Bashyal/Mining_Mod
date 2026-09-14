@@ -5,6 +5,7 @@ import net.bikash.miningmod.MiningMod;
 
 import net.minecraft.core.registries.Registries;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 
 import net.minecraft.world.item.ArmorItem;
@@ -35,14 +36,16 @@ public class ModArmorMaterials {
                     30,
                     SoundEvents.ARMOR_EQUIP_DIAMOND,
                     () -> Ingredient.of(Moditems.RUBY.get()),
-                    List.of(),
-                    0.0F,
-                    0.0F
+                    List.of(new ArmorMaterial.Layer(
+                            ResourceLocation.fromNamespaceAndPath(MiningMod.MOD_ID, "ruby")
+                    )),
+                    10.0F,
+                    0.8F
             ));
 
 
     public static final RegistryObject<ArmorMaterial> SAPPHIRE =
-            ARMOR_MATERIALS.register("ruby", () -> new ArmorMaterial(
+            ARMOR_MATERIALS.register("sapphire", () -> new ArmorMaterial(
                     Map.of(
                             ArmorItem.Type.HELMET, 3,
                             ArmorItem.Type.CHESTPLATE, 8,

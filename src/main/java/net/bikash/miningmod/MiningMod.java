@@ -49,10 +49,12 @@ public class MiningMod
 
 
         // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
 
         Moditems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModArmorMaterials.ARMOR_MATERIALS.register(modEventBus);
+
+        MinecraftForge.EVENT_BUS.register(MiningMod.class);
 
 
 
@@ -86,14 +88,14 @@ if(event.getTabKey()== CreativeModeTabs.NATURAL_BLOCKS){
     event.accept(ModBlocks.RUBY_ORE);
     event.accept(ModBlocks.SAPPHIRE_ORE);
 }
-if(event.getTabKey()==CreativeModeTabs.TOOLS_AND_UTILITIES){
+if(event.getTabKey()==CreativeModeTabs.COMBAT){
     event.accept(Moditems.RUBY_AXE);
     event.accept(Moditems.RUBY_PICKAXE);
     event.accept(Moditems.RUBY_HOE);
     event.accept(Moditems.RUBY_SHOVEL);
     event.accept(Moditems.RUBY_SWORD);
     }
-        if(event.getTabKey()==CreativeModeTabs.TOOLS_AND_UTILITIES) {
+        if(event.getTabKey()==CreativeModeTabs.COMBAT) {
             event.accept(Moditems.RUBY_HELMET);
             event.accept(Moditems.RUBY_CHESTPLATE);
             event.accept(Moditems.RUBY_LEGGINGS);

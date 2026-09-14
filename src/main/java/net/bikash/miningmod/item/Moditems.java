@@ -37,6 +37,10 @@ public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
     public static final RegistryObject<Item> RUBY_SHOVEL = ITEMS.register("ruby_shovel",
             ()-> new ShovelItem(ModToolTiers.RUBY,new Item.Properties()));
 
+    //registering ruby armours
+
+
+
 public static void register(IEventBus eventBus){
     ITEMS.register(eventBus);
 }

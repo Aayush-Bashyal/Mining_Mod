@@ -20,7 +20,7 @@ public static final Tier RUBY = new Tier() {
 
     @Override
     public float getAttackDamageBonus() {
-        return 3.0F;
+        return 10.0F;
     }
 
     @Override

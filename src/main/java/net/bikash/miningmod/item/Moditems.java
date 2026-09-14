@@ -34,7 +34,7 @@ public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
     public static final RegistryObject<Item> RUBY_SWORD = ITEMS.register("ruby_sword",
             ()-> new PickaxeItem(ModToolTiers.RUBY,new Item.Properties()));
 //hoe
-    public static final RegistryObject<Item> RUBY_hoe = ITEMS.register("ruby_hoe",
+    public static final RegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe",
             ()-> new PickaxeItem(ModToolTiers.RUBY,new Item.Properties()));
     //showel
     public static final RegistryObject<Item> RUBY_SHOVEL = ITEMS.register("ruby_shovel",

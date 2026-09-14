@@ -1,5 +1,6 @@
 package net.bikash.miningmod.item;
 
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -14,7 +15,7 @@ public static final Tier RUBY = new Tier() {
 
     @Override
     public float getSpeed() {
-        return 9.0F;
+        return 15.0F;
     }
 
     @Override
@@ -24,7 +25,7 @@ public static final Tier RUBY = new Tier() {
 
     @Override
     public TagKey<Block> getIncorrectBlocksForDrops() {
-        return null;
+        return BlockTags.INCORRECT_FOR_DIAMOND_TOOL;
     }
 
     @Override
@@ -55,7 +56,7 @@ public static final  Tier SAPPHIRE = new Tier() {
 
     @Override
     public TagKey<Block> getIncorrectBlocksForDrops() {
-        return null;
+        return BlockTags.INCORRECT_FOR_DIAMOND_TOOL;
     }
 
     @Override

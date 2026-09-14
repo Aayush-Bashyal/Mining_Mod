@@ -2,6 +2,7 @@ package net.bikash.miningmod;
 
 import com.mojang.logging.LogUtils;
 import net.bikash.miningmod.block.ModBlocks;
+import net.bikash.miningmod.item.ModToolTiers;
 import net.bikash.miningmod.item.Moditems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -76,6 +77,13 @@ if(event.getTabKey()== CreativeModeTabs.NATURAL_BLOCKS){
     event.accept(ModBlocks.RUBY_ORE);
     event.accept(ModBlocks.SAPPHIRE_ORE);
 }
+if(event.getTabKey()==CreativeModeTabs.TOOLS_AND_UTILITIES){
+    event.accept(Moditems.RUBY_AXE);
+    event.accept(Moditems.RUBY_PICKAXE);
+    event.accept(Moditems.RUBY_HOE);
+    event.accept(Moditems.RUBY_SHOVEL);
+    event.accept(Moditems.RUBY_SWORD);
+    }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

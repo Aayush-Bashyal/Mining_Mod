@@ -34,7 +34,7 @@ public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
 //hoe
     public static final RegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe",
             ()-> new HoeItem(ModToolTiers.RUBY,new Item.Properties()));
-    //showel
+    //shoVel
     public static final RegistryObject<Item> RUBY_SHOVEL = ITEMS.register("ruby_shovel",
             ()-> new ShovelItem(ModToolTiers.RUBY,new Item.Properties()));
 
@@ -51,6 +51,18 @@ public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
     public static final RegistryObject<Item> RUBY_BOOTS = ITEMS.register("ruby_boots",
             () -> new ArmorItem(ModArmorMaterials.RUBY.getHolder().get(), ArmorItem.Type.BOOTS , new Item.Properties()));
 
+    //registering sapphire armors
+    public static final RegistryObject<Item> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet",
+            () -> new ArmorItem(ModArmorMaterials.RUBY.getHolder().get(), ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.RUBY.getHolder().get(), ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+
+    public static final RegistryObject<Item> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings",
+            () -> new ArmorItem(ModArmorMaterials.RUBY.getHolder().get(), ArmorItem.Type.LEGGINGS, new Item.Properties()));
+
+    public static final RegistryObject<Item> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots",
+            () -> new ArmorItem(ModArmorMaterials.RUBY.getHolder().get(), ArmorItem.Type.BOOTS , new Item.Properties()));
 
 public static void register(IEventBus eventBus){
     ITEMS.register(eventBus);

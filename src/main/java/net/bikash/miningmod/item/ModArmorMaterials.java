@@ -39,4 +39,22 @@ public class ModArmorMaterials {
                     0.0F,
                     0.0F
             ));
+
+
+    public static final RegistryObject<ArmorMaterial> SAPPHIRE =
+            ARMOR_MATERIALS.register("ruby", () -> new ArmorMaterial(
+                    Map.of(
+                            ArmorItem.Type.HELMET, 3,
+                            ArmorItem.Type.CHESTPLATE, 8,
+                            ArmorItem.Type.LEGGINGS, 6,
+                            ArmorItem.Type.BOOTS, 3,
+                            ArmorItem.Type.BODY, 8
+                    ),
+                    30,
+                    SoundEvents.ARMOR_EQUIP_DIAMOND,
+                    () -> Ingredient.of(Moditems.SAPPHIRE.get()),
+                    List.of(),
+                    0.0F,
+                    0.0F
+            ));
 }

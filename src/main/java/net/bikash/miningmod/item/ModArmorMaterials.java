@@ -56,8 +56,10 @@ public class ModArmorMaterials {
                     30,
                     SoundEvents.ARMOR_EQUIP_DIAMOND,
                     () -> Ingredient.of(Moditems.SAPPHIRE.get()),
-                    List.of(),
-                    0.0F,
-                    0.0F
+                    List.of(new ArmorMaterial.Layer(
+                            ResourceLocation.fromNamespaceAndPath(MiningMod.MOD_ID, "sapphire")
+                    )),
+                    5.0F,
+                    0.8F
             ));
 }

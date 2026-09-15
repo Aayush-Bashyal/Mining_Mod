@@ -7,13 +7,16 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
- import net.minecraft.world.entity.projectile.ThrownTrident;
+import net.minecraft.world.entity.projectile.ThrownTrident;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.component.Tool;
+import net.minecraft.world.phys.Vec3;
+
 import java.util.List;
 public class SapphireExtremeItem extends Item
 { public SapphireExtremeItem(Item.Properties properties) {
@@ -34,8 +37,20 @@ public class SapphireExtremeItem extends Item
     @Override
     public InteractionResultHolder<ItemStack> use( Level level, Player player, InteractionHand hand)
     { ItemStack stack = player.getItemInHand(hand);
+        if (player.isInWaterOrRain()) {
+            Vec3 look = player.getLookAngle();
+
+            player.setDeltaMovement(
+                    look.x * 5.0,
+                    look.y * 5.0,
+                    look.z * 5.0
+            );
+
+            player.hurtMarked = true;
+        }
         if (!level.isClientSide)
-        { ThrownTrident trident = new ThrownTrident( level, player, stack.copy() );
+        { ThrownTrident trident = new ThrownTrident( level, player, new ItemStack(Items.TRIDENT));
+
             trident.shootFromRotation( player, player.getXRot(), player.getYRot(),
                     0.0F, 3.0F, 1.0F );
             level.addFreshEntity(trident);

@@ -123,6 +123,25 @@ if(event.getTabKey()==CreativeModeTabs.COMBAT){
 
         }
     }
+
+
+    @SubscribeEvent
+    public static void onPlayertick(TickEvent.PlayerTickEvent event){
+        if (event.phase != TickEvent.Phase.END){
+            return;
+        }
+        if(event.player.level().isClientSide()){
+            return;
+        }
+        if(event.player.getItemBySlot(EquipmentSlot.HEAD).is(Moditems.  SAPPHIRE_HELMET.get())){
+            event.player.addEffect(new MobEffectInstance(MobEffects.REGENERATION,
+                    400,
+                    0,
+                    false,
+                    false));
+
+        }
+    }
     @SubscribeEvent
     public static void onLivingFall(LivingFallEvent event){
         if(event.getEntity() instanceof Player player){

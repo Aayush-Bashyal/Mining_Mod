@@ -7,7 +7,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
+import java.util.Properties;
 public class Moditems {
 public static final DeferredRegister<Item> ITEMS =
         DeferredRegister.create(ForgeRegistries.ITEMS, MiningMod.MOD_ID);
@@ -50,6 +50,18 @@ public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
 
     public static final RegistryObject<Item> RUBY_BOOTS = ITEMS.register("ruby_boots",
             () -> new ArmorItem(ModArmorMaterials.RUBY.getHolder().get(), ArmorItem.Type.BOOTS , new Item.Properties().stacksTo(1)));
+
+
+
+
+    //sapphire extereme item registration
+    public static final RegistryObject<Item> SAPPHIRE_EXTREME = ITEMS.register( "sapphire_extreme",
+            () -> new SapphireExtremeItem(new Item.Properties().stacksTo(1)
+                    .durability(10000)) );
+
+
+
+
 
     //registering sapphire armors
     public static final RegistryObject<Item> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet",

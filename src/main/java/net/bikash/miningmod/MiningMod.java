@@ -96,6 +96,7 @@ if(event.getTabKey()==CreativeModeTabs.COMBAT){
     event.accept(Moditems.RUBY_HOE);
     event.accept(Moditems.RUBY_SHOVEL);
     event.accept(Moditems.RUBY_SWORD);
+    event.accept(Moditems.SAPPHIRE_EXTREME);
     }
         if(event.getTabKey()==CreativeModeTabs.COMBAT) {
             event.accept(Moditems.RUBY_HELMET);

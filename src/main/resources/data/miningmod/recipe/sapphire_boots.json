@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "R R",
+    "R R"
+  ],
+  "key": {
+    "R": {
+      "item": "miningmod:sapphire"
+    },
+    "result": {
+      "id": "miningmod:sapphire_boots",
+      "count": 1
+    }
+  }
+}

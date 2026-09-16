@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NED",
+    " X ",
+    " S "
+  ],
+  "key": {
+    "X": {
+      "item": "miningmod:sapphire"
+    },
+    "S":{
+      "item": "minecraft:stick"
+    },
+    "E":{
+      "item": "minecraft:dragon_egg"
+    },
+    "N":{
+      "item": "minecraft:netherite_ingot"
+    },
+    "D":{
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "id": "miningmod:sapphire_extreme",
+    "count": 1
+  }
+}

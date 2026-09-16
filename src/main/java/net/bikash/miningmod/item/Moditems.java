@@ -1,8 +1,13 @@
 package net.bikash.miningmod.item;
 
 import net.bikash.miningmod.MiningMod;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.*;
 
+import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -29,8 +34,14 @@ public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
     public static final RegistryObject<Item> RUBY_AXE = ITEMS.register("ruby_axe",
             ()-> new AxeItem(ModToolTiers.RUBY,new Item.Properties().stacksTo(1)));
     //sword
-    public static final RegistryObject<Item> RUBY_SWORD = ITEMS.register("ruby_sword",
-            ()-> new SwordItem(ModToolTiers.RUBY,new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> RUBY_SWORD = ITEMS.register( "ruby_sword",
+            () -> new SwordItem( ModToolTiers.RUBY, new Item.Properties() .stacksTo(1)
+                    .attributes( ItemAttributeModifiers.builder()
+                            .add( Attributes.ATTACK_DAMAGE,
+                                    new AttributeModifier( ResourceLocation.fromNamespaceAndPath( "miningmod", "ruby_sword_damage" ),
+                                            20.0,
+                                            AttributeModifier.Operation.ADD_VALUE ),
+                                    EquipmentSlotGroup.MAINHAND ) .build() ) ) );
 //hoe
     public static final RegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe",
             ()-> new HoeItem(ModToolTiers.RUBY,new Item.Properties().stacksTo(1)));

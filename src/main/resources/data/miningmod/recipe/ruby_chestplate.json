@@ -7,11 +7,10 @@
   ],
   "key": {
     "R": {
-      "item": "miningmod:ruby"
+      "item": "miningmod:ruby"}
     },
     "result": {
       "id": "miningmod:ruby_chestplate",
       "count": 1
     }
   }
-}

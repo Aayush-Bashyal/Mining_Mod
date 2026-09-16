@@ -35,8 +35,8 @@ public class SapphireExtremeItem extends Item
 
 }
     @Override
-    public InteractionResultHolder<ItemStack> use( Level level, Player player, InteractionHand hand)
-    { ItemStack stack = player.getItemInHand(hand);
+    public InteractionResultHolder<ItemStack> use( Level level, Player player, InteractionHand hand) {
+        ItemStack stack = player.getItemInHand(hand);
         if (player.isInWaterOrRain()) {
             Vec3 look = player.getLookAngle();
 
@@ -48,11 +48,9 @@ public class SapphireExtremeItem extends Item
 
             player.hurtMarked = true;
         }
-        if (!level.isClientSide)
-        { ThrownTrident trident = new ThrownTrident( level, player, new ItemStack(Items.TRIDENT));
-
-            trident.shootFromRotation( player, player.getXRot(), player.getYRot(),
-                    0.0F, 3.0F, 1.0F );
-            level.addFreshEntity(trident);
-        } return InteractionResultHolder.sidedSuccess( stack, level.isClientSide() ); }
+        return InteractionResultHolder.sidedSuccess(
+                stack,
+                level.isClientSide()
+        );
+    }
 }

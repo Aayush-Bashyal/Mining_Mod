@@ -7,11 +7,11 @@
   ],
   "key": {
     "R": {
-      "item": "miningmod:sapphire"
+      "item": "miningmod:sapphire"}
     },
     "result": {
       "id": "miningmod:sapphire_chestplate",
       "count": 1
     }
-  }
+
 }

@@ -6,11 +6,10 @@
   ],
   "key": {
     "R": {
-      "item": "miningmod:sapphire"
+      "item": "miningmod:sapphire"}
     },
     "result": {
       "id": "miningmod:sapphire_boots",
       "count": 1
     }
   }
-}

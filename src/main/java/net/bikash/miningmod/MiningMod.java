@@ -105,6 +105,13 @@ if(event.getTabKey()==CreativeModeTabs.COMBAT){
             event.accept(Moditems.RUBY_BOOTS);
         }
 
+        if(event.getTabKey()==CreativeModeTabs.COMBAT) {
+            event.accept(Moditems.SAPPHIRE_HELMET);
+            event.accept(Moditems.SAPPHIRE_CHESTPLATE);
+            event.accept(Moditems.SAPPHIRE_LEGGINGS);
+            event.accept(Moditems.SAPPHIRE_BOOTS);
+        }
+
     }
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event){

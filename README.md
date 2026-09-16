@@ -76,7 +76,12 @@ It can mine blocks very quickly and has high attack damage. It can also be used 
 
 ## Screenshots
 
-I will add screenshots here from my Minecraft gameplay.
+<img width="1366" height="697" alt="2026-09-16_12 10 12" src="https://github.com/user-attachments/assets/eb9a60c4-8561-4c9b-adda-715d4fe6ffcc" />
+<img width="1366" height="697" alt="2026-09-16_12 11 48" src="https://github.com/user-attachments/assets/ccb05aea-eb27-4c2c-ba02-9933e8862083" />
+<img width="1366" height="697" alt="2026-09-16_12 10 23" src="https://github.com/user-attachments/assets/15673687-88de-4610-89cd-202af78cfa3d" />
+<img width="1366" height="697" alt="2026-09-16_12 11 53" src="https://github.com/user-attachments/assets/d8ad656c-8cf2-4712-9c30-0550a227e6e2" />
+<img width="1366" height="697" alt="2026-09-16_12 17 12" src="https://github.com/user-attachments/assets/4d6ed88c-e2fa-4bb5-9052-a68298130f71" />
+<img width="1366" height="697" alt="2026-09-16_12 15 18" src="https://github.com/user-attachments/assets/8bdc3d55-4891-4d0d-b854-4c044c5130ef" />
 
 ---
 

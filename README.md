@@ -99,6 +99,6 @@ Made by Aayush Bashyal
 
 This is my first Minecraft mod project and I will continue adding things to it.
 
-##Online Download Link :https://github.com/Aayush-Bashyal/Mining_Mod/releases/tag/v1.0.0
+## Online Download Link :https://github.com/Aayush-Bashyal/Mining_Mod/releases/tag/v1.0.0
 
-##Gameplay Video:
+## Gameplay Video:
